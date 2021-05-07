@@ -1,10 +1,15 @@
 brats/logs/*
 brats/data/*
+!brats/data/incoming/.gitkeep
+!brats/data/processed/.gitkeep
+
+
 brats/docker/id_*
 brats/docker/known_hosts
 
 
 brats_filter/data/*
+!brats_filter/data/.gitkeep
 brats_filter/logs/filter.log
 brats_filter/logs/postop/*
 brats_filter/logs/preop/*
