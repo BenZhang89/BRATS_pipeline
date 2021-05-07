@@ -5,8 +5,7 @@ brats/docker/known_hosts
 
 
 brats_filter/data/*
-brats_filter/logs/*
-!brats_filter/logs/.gitkeep
+brats_filter/logs/filter.log
 brats_filter/logs/postop/*
 brats_filter/logs/preop/*
 !brats_filter/logs/postop/.gitkeep
