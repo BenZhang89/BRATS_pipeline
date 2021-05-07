@@ -1,5 +1,7 @@
 brats/logs/*
-brats/data/*
+!brats/logs/.gitkeep
+brats/data/incoming
+brats/data/processed
 !brats/data/incoming/.gitkeep
 !brats/data/processed/.gitkeep
 
