@@ -1,0 +1,13 @@
+version : '3'
+services:
+  brats:
+    image: brats:latest
+    build:
+      context: ./docker/
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app/
+      - /data/btseg:/app/data
+    environment:
+      - "TZ=America/New_York"
+    restart: always

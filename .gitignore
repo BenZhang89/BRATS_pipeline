@@ -1,0 +1,17 @@
+brats/logs/*
+brats/data/*
+brats/docker/id_*
+brats/docker/known_hosts
+
+
+brats_filter/data/*
+brats_filter/logs/*
+
+
+brats_receive_mri/data/*
+!brats_receive_mri/data/.gitkeep
+brats_receive_mri/logs/postop/*
+brats_receive_mri/logs/preop/*
+!brats_receive_mri/logs/postop/.gitkeep
+!brats_receive_mri/logs/preop/.gitkeep
+brats_receive_mri/demo_dcm

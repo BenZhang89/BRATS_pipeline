@@ -1,0 +1,18 @@
+version: "3"
+services:
+  brain_mri_preop:
+    image: brain_mri_preop 
+    build: ./
+    environment:
+      - "TZ=America/New_York"
+      - storage=/app/data/incoming/preop
+      - log=/app/logs/preop
+      - aetitle=BRAIN_MRI
+      - aeport=11112
+    volumes:
+      - /app/brats_receive_mri:/app
+      - /data/btseg:/app/data
+    ports:
+      - '11112:11112'
+    restart: always
+

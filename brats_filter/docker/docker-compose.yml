@@ -1,0 +1,15 @@
+version : '3'
+services:
+  brats_filter:
+    image: brats_filter:latest
+    build: ./
+    environment:
+      - "TZ=America/New_York"
+      - preop_dir=/app/data/incoming/preop
+      - postop_dir=/app/data/incoming/postop
+      - log_dir=/app/logs
+    volumes:
+      - /app/brats_filter:/app/
+      - /data/btseg:/app/data
+      #- /app:/home/
+    restart: always

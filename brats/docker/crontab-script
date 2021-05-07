@@ -1,0 +1,1 @@
+*/50 * * * * root /app/loopall.sh >> /app/logs/brats.log 2>&1

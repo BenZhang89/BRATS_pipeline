@@ -1,0 +1,1 @@
+0 */1 * * * root /app/loopall.sh >> /app/logs/filter.log 2>&1
