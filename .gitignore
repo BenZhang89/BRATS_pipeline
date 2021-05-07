@@ -1,4 +1,4 @@
-brats/logs/*
+brats/logs
 !brats/logs/.gitkeep
 brats/data/incoming
 brats/data/processed
