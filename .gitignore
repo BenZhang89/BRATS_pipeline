@@ -1,11 +1,9 @@
-brats/logs
+brats/logs/*
 !brats/logs/.gitkeep
-brats/data/incoming
-brats/data/processed
+brats/data/incoming/*
+brats/data/processed/*
 !brats/data/incoming/.gitkeep
 !brats/data/processed/.gitkeep
-
-
 brats/docker/id_*
 brats/docker/known_hosts
 
