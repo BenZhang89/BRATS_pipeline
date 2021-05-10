@@ -28,6 +28,8 @@ We deployed 4 docker containers with daily logs:
 
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-2.png?raw=true)
 
+### Template of View in PACS
+
 
 ## Getting Started
 
@@ -74,4 +76,6 @@ Ben Zhang [dongshangshi@gmail.com]
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
+* [CACNN](https://github.com/taigw/brats17)
+* [Third Party implementation of 1st BraTs 2018](https://github.com/black0017/MedicalZooPytorch)
 * [neurodocker](https://github.com/ReproNim/neurodocker)
