@@ -1,8 +1,9 @@
-# BRATS_pipeline
+# Pipeline of Brain Tumor Segmentation
 
-Simple overview of use/purpose.
+This is a practical implementation of a deep learning-based pipeline for automated pre- and postoperative glioma segmentation. 
 
 ## Description
+
 
 An in-depth paragraph about your project and overview of use.
 
