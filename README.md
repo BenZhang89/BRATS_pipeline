@@ -28,8 +28,9 @@ We deployed 4 docker containers with daily logs:
 
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-2.png?raw=true)
 
-### Template of View in PACS
-
+### Template View in PACS
+This is the view of segmentation using "flair" and "t1ce" as background, with volumetric report regarding to different part of tumor.
+![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/presentcase-1.png?raw=true)
 
 ## Getting Started
 
