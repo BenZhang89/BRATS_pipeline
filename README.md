@@ -7,10 +7,10 @@ Accurate segmentation of tumor sub-regions (enhancement, edema) can offer the ba
 
 ### An end-to-end pipeline
 We create a pipeline which can route brain tumor DICOM, automate the segmentation algorithm, and push quantitative results back for clinical viewing. This pipeline is composed of 2 servers:
-* Data Transit Server:
-Receive brain tumor DICOM + push processed DICOM back to PACS
-* Inference Server:
-(1) pre-processor; 
+* **Data Transit Server:**
+Receive brain tumor DICOM + filter the right input series + push processed DICOM back to PACS
+* **Inference Server:**
+* `(1) pre-processor`
 (2) segmentation ; 
 (3) post-processor. A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
 
