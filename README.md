@@ -10,16 +10,21 @@ We create a pipeline which can route brain tumor DICOM, automate the segmentatio
 * **Data Transit Server:**
 Receive brain tumor DICOM + filter the right input series + push processed DICOM back to PACS
 * **Inference Server:**
-  `(1) pre-processor`
-  `(2) segmentation`
-  `(3) post-processor`
-A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
+  This server is composed of 3 modules, i.e. (1) pre-processor (2) segmentation (3) post-processor. The deep learning model used in the pipeline can be found here:https://github.com/abenpy/ARCNet. A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
 
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
 
 ### Detailed introduction about Data Transit Server
+4 docker containers with daily logs. 
+* **Pre-OP Receiver:** receive DICOM using “pynetdicom”
+Rules: brain tumor protocol; study descriptions ends in Head; study descriptions contains “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
+Post-OP Receiver: receive DICOM using “pynetdicom”
+Rules: brain tumor protocol; study descriptions ends in Head;; study descriptions contains “PERFUSION”, “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
+DICOM Filter: select studies with 4 series only, i.e. t1ce, t1, t2, flair
+DICOM Receiver: push processed DICOM back to PACS, using “dcm4che”
+
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-2.png?raw=true)
-An in-depth paragraph about your project and overview of use.
+
 
 ## Getting Started
 
