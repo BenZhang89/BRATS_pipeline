@@ -5,17 +5,18 @@ This is a practical implementation of a deep learning-based pipeline for automat
 ## Description
 Accurate segmentation of tumor sub-regions (enhancement, edema) can offer the basis for quantitative image analysis towards precision medicine and improvements in individual prognostication. Bringing such tools to clinical reality requires thoughtful implementation. We describe the components required towards clinical deployment of a deep learning-based glioma segmentation model.
 
-![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
-
-An end-to-end pipeline: route brain tumor DICOM, automate the segmentation algorithm, and push quantitative results back for clinical viewing. 
-Data Transit Server:
+### An end-to-end pipeline
+We create a pipeline which can route brain tumor DICOM, automate the segmentation algorithm, and push quantitative results back for clinical viewing. This pipeline is composed of 2 servers:
+* Data Transit Server:
 Receive brain tumor DICOM + push processed DICOM back to PACS
-Inference Server:
+* Inference Server:
 (1) pre-processor; 
 (2) segmentation ; 
 (3) post-processor. A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
 
+![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
 
+### Detailed introduction about Data Transit Server
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-2.png?raw=true)
 An in-depth paragraph about your project and overview of use.
 
