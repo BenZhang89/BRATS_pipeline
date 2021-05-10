@@ -3,7 +3,7 @@
 This is a practical implementation of a deep learning-based pipeline for automated pre- and postoperative glioma segmentation. 
 
 ## Description
-![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true | width=100)
+![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
 
 An in-depth paragraph about your project and overview of use.
 
