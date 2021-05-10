@@ -10,9 +10,10 @@ We create a pipeline which can route brain tumor DICOM, automate the segmentatio
 * **Data Transit Server:**
 Receive brain tumor DICOM + filter the right input series + push processed DICOM back to PACS
 * **Inference Server:**
-* `(1) pre-processor`
-(2) segmentation ; 
-(3) post-processor. A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
+  `(1) pre-processor`
+  `(2) segmentation`
+  `(3) post-processor`
+A result incorporating segmentation visualization and volumetrics is routed to the clinical PACS environment.
 
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
 
