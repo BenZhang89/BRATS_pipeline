@@ -15,13 +15,14 @@ Receive brain tumor DICOM + filter the right input series + push processed DICOM
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-1.png?raw=true)
 
 ### Detailed introduction about Data Transit Server
-4 docker containers with daily logs. 
-* **Pre-OP Receiver:** receive DICOM using “pynetdicom”
-Rules: brain tumor protocol; study descriptions ends in Head; study descriptions contains “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
-Post-OP Receiver: receive DICOM using “pynetdicom”
-Rules: brain tumor protocol; study descriptions ends in Head;; study descriptions contains “PERFUSION”, “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
-DICOM Filter: select studies with 4 series only, i.e. t1ce, t1, t2, flair
-DICOM Receiver: push processed DICOM back to PACS, using “dcm4che”
+We deployed 4 docker containers with daily logs: 
+* **Pre-OP Receiver:** receive DICOM using “pynetdicom”, 
+    * Rules: brain tumor protocol; study descriptions ends in Head; study descriptions contains “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
+
+* **Post-OP Receiver:** receive DICOM using “pynetdicom”
+    * Rules: brain tumor protocol; study descriptions ends in Head;; study descriptions contains “PERFUSION”, “AX T1 PRE”, “AX T2”, ”SAG 3D FLAIR”, ”SAG MPR” etc.
+* **DICOM Filter:** select studies with 4 series only, i.e. t1ce, t1, t2, flair
+* **DICOM Sender:** push processed DICOM back to PACS, using “dcm4che”.(currently was encapusated in Inference Server)
 
 ![](https://github.com/abenpy/BRATS_pipeline/blob/master/png/pipeline-2.png?raw=true)
 
